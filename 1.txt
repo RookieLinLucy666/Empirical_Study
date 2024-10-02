@@ -1,0 +1,1378 @@
+============================================================
+Step1. Federated Learning Settings 
+ We use iid0dataset: cifar10 for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+Files already downloaded and verified
+Files already downloaded and verified
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+#####  Federated Learning Start#####
+Global Federated Learning epoch = 0
+Test normal set: Average loss: 0.03650828
+Test normal set: Average acc:  0.0998
+Global Federated Learning epoch = 1
+Test normal set: Average loss: 0.03564836
+Test normal set: Average acc:  0.1638
+Global Federated Learning epoch = 2
+Test normal set: Average loss: 0.03422521
+Test normal set: Average acc:  0.1869
+Global Federated Learning epoch = 3
+Test normal set: Average loss: 0.03197933
+Test normal set: Average acc:  0.2510
+Global Federated Learning epoch = 4
+Test normal set: Average loss: 0.03032191
+Test normal set: Average acc:  0.2817
+Global Federated Learning epoch = 5
+Test normal set: Average loss: 0.02878142
+Test normal set: Average acc:  0.3184
+Global Federated Learning epoch = 6
+Test normal set: Average loss: 0.02778682
+Test normal set: Average acc:  0.3353
+Global Federated Learning epoch = 7
+Test normal set: Average loss: 0.02687251
+Test normal set: Average acc:  0.3700
+Global Federated Learning epoch = 8
+Test normal set: Average loss: 0.02653655
+Test normal set: Average acc:  0.3746
+Global Federated Learning epoch = 9
+Test normal set: Average loss: 0.02614775
+Test normal set: Average acc:  0.3939
+Global Federated Learning epoch = 10
+Test normal set: Average loss: 0.02607418
+Test normal set: Average acc:  0.4038
+Global Federated Learning epoch = 11
+Test normal set: Average loss: 0.02575887
+Test normal set: Average acc:  0.4168
+Global Federated Learning epoch = 12
+Test normal set: Average loss: 0.02589975
+Test normal set: Average acc:  0.4243
+Global Federated Learning epoch = 13
+Test normal set: Average loss: 0.02594250
+Test normal set: Average acc:  0.4332
+Global Federated Learning epoch = 14
+Test normal set: Average loss: 0.02643007
+Test normal set: Average acc:  0.4354
+Global Federated Learning epoch = 15
+Test normal set: Average loss: 0.02659209
+Test normal set: Average acc:  0.4508
+Global Federated Learning epoch = 16
+Test normal set: Average loss: 0.02746177
+Test normal set: Average acc:  0.4455
+Global Federated Learning epoch = 17
+Test normal set: Average loss: 0.02773926
+Test normal set: Average acc:  0.4523
+Global Federated Learning epoch = 18
+Test normal set: Average loss: 0.02849608
+Test normal set: Average acc:  0.4546
+Global Federated Learning epoch = 19
+Test normal set: Average loss: 0.02880730
+Test normal set: Average acc:  0.4601
+#####  Federated Learning End#####
+
+
+#####  Federated Unlearning Start  #####
+Federated Unlearning Global Epoch  = 0
+Local Calibration Training epoch = 5
+Federated Unlearning Global Epoch  = 1
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03657056
+Test normal set: Average acc:  0.1001
+Federated Unlearning Global Epoch  = 2
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03628001
+Test normal set: Average acc:  0.0995
+Federated Unlearning Global Epoch  = 3
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03608108
+Test normal set: Average acc:  0.1004
+Federated Unlearning Global Epoch  = 4
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03584140
+Test normal set: Average acc:  0.1037
+Federated Unlearning Global Epoch  = 5
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03558148
+Test normal set: Average acc:  0.1181
+Federated Unlearning Global Epoch  = 6
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03528091
+Test normal set: Average acc:  0.1391
+Federated Unlearning Global Epoch  = 7
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03496346
+Test normal set: Average acc:  0.1589
+Federated Unlearning Global Epoch  = 8
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03460007
+Test normal set: Average acc:  0.1759
+Federated Unlearning Global Epoch  = 9
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03421857
+Test normal set: Average acc:  0.1925
+Federated Unlearning Global Epoch  = 10
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03381261
+Test normal set: Average acc:  0.2058
+Federated Unlearning Global Epoch  = 11
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03342263
+Test normal set: Average acc:  0.2121
+Federated Unlearning Global Epoch  = 12
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03303106
+Test normal set: Average acc:  0.2167
+Federated Unlearning Global Epoch  = 13
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03264512
+Test normal set: Average acc:  0.2250
+Federated Unlearning Global Epoch  = 14
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03225207
+Test normal set: Average acc:  0.2343
+Federated Unlearning Global Epoch  = 15
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03187753
+Test normal set: Average acc:  0.2379
+Federated Unlearning Global Epoch  = 16
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03160789
+Test normal set: Average acc:  0.2419
+Federated Unlearning Global Epoch  = 17
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03124183
+Test normal set: Average acc:  0.2531
+Federated Unlearning Global Epoch  = 18
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03096833
+Test normal set: Average acc:  0.2640
+Federated Unlearning Global Epoch  = 19
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03070854
+Test normal set: Average acc:  0.2709
+#####  Federated Unlearning End  #####
+
+
+#####  No Retraining #####
+ Learning time consuming = 215.15300464630127 secods
+ Unlearning time consuming = 109.71968054771423 secods
+ Retraining time consuming = 0 secods
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9549
+Test unlearn set: prediction error:  0.3776
+Global Model Backdoor Accuracy on Triggered Data: 21.00%
+
+MIA Attacker accuracy = 0.9511
+Test retain set: prediction error:  0.4023
+Global Model Backdoor Accuracy on Clean Data: 23.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.4920
+Test unlearn set: prediction error:  0.8056
+Global Model Backdoor Accuracy on Triggered Data: 25.00%
+
+MIA Attacker accuracy = 0.5030
+Test retain set: prediction error:  0.5464
+Global Model Backdoor Accuracy on Clean Data: 15.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid0dataset: cifar10 for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+Files already downloaded and verified
+Files already downloaded and verified
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+#####  Federated Learning Start#####
+#####  Federated Learning End#####
+
+
+#####  Federated Unlearning Start  #####
+Federated Unlearning Global Epoch  = 0
+Local Calibration Training epoch = 5
+Federated Unlearning Global Epoch  = 1
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03657211
+Test normal set: Average acc:  0.1001
+Federated Unlearning Global Epoch  = 2
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03625276
+Test normal set: Average acc:  0.1004
+Federated Unlearning Global Epoch  = 3
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03599269
+Test normal set: Average acc:  0.1868
+Federated Unlearning Global Epoch  = 4
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03585498
+Test normal set: Average acc:  0.1879
+Federated Unlearning Global Epoch  = 5
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03573511
+Test normal set: Average acc:  0.1741
+Federated Unlearning Global Epoch  = 6
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03557778
+Test normal set: Average acc:  0.1730
+Federated Unlearning Global Epoch  = 7
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03533477
+Test normal set: Average acc:  0.1734
+Federated Unlearning Global Epoch  = 8
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03501693
+Test normal set: Average acc:  0.1728
+Federated Unlearning Global Epoch  = 9
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03462569
+Test normal set: Average acc:  0.1725
+Federated Unlearning Global Epoch  = 10
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03427204
+Test normal set: Average acc:  0.1716
+Federated Unlearning Global Epoch  = 11
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03388529
+Test normal set: Average acc:  0.1744
+Federated Unlearning Global Epoch  = 12
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03352933
+Test normal set: Average acc:  0.1783
+Federated Unlearning Global Epoch  = 13
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03317964
+Test normal set: Average acc:  0.1915
+Federated Unlearning Global Epoch  = 14
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03281218
+Test normal set: Average acc:  0.2072
+Federated Unlearning Global Epoch  = 15
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03251159
+Test normal set: Average acc:  0.2179
+Federated Unlearning Global Epoch  = 16
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03219156
+Test normal set: Average acc:  0.2375
+Federated Unlearning Global Epoch  = 17
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03203425
+Test normal set: Average acc:  0.2382
+Federated Unlearning Global Epoch  = 18
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03168072
+Test normal set: Average acc:  0.2608
+Federated Unlearning Global Epoch  = 19
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03154132
+Test normal set: Average acc:  0.2636
+#####  Federated Unlearning End  #####
+
+
+#####  No Retraining #####
+ Learning time consuming = 5.7106428146362305 secods
+ Unlearning time consuming = 135.2323977947235 secods
+ Retraining time consuming = 0 secods
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9509
+Test unlearn set: prediction error:  0.6361
+Global Model Backdoor Accuracy on Triggered Data: 21.00%
+
+MIA Attacker accuracy = 0.9531
+Test retain set: prediction error:  0.4939
+Global Model Backdoor Accuracy on Clean Data: 23.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.5000
+Test unlearn set: prediction error:  0.3600
+Global Model Backdoor Accuracy on Triggered Data: 78.00%
+
+MIA Attacker accuracy = 0.5038
+Test retain set: prediction error:  0.5678
+Global Model Backdoor Accuracy on Clean Data: 14.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid0dataset: cifar10 for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+Files already downloaded and verified
+Files already downloaded and verified
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+
+
+#####  Federated Retraining Start  #####
+Federated Retrain with Forget Client NO.[2]
+Bypass the forget client FL train
+Global Retraining epoch = 0
+Test normal set: Average loss: 0.03664929
+Test normal set: Average acc:  0.1317
+Bypass the forget client FL train
+Global Retraining epoch = 1
+Test normal set: Average loss: 0.03571891
+Test normal set: Average acc:  0.1633
+Bypass the forget client FL train
+Global Retraining epoch = 2
+Test normal set: Average loss: 0.03443893
+Test normal set: Average acc:  0.1915
+Bypass the forget client FL train
+Global Retraining epoch = 3
+Test normal set: Average loss: 0.03247878
+Test normal set: Average acc:  0.2515
+Bypass the forget client FL train
+Global Retraining epoch = 4
+Test normal set: Average loss: 0.03142656
+Test normal set: Average acc:  0.2757
+Bypass the forget client FL train
+Global Retraining epoch = 5
+Test normal set: Average loss: 0.03024768
+Test normal set: Average acc:  0.2969
+Bypass the forget client FL train
+Global Retraining epoch = 6
+Test normal set: Average loss: 0.02937505
+Test normal set: Average acc:  0.3253
+Bypass the forget client FL train
+Global Retraining epoch = 7
+Test normal set: Average loss: 0.02825557
+Test normal set: Average acc:  0.3519
+Bypass the forget client FL train
+Global Retraining epoch = 8
+Test normal set: Average loss: 0.02785536
+Test normal set: Average acc:  0.3648
+Bypass the forget client FL train
+Global Retraining epoch = 9
+Test normal set: Average loss: 0.02715547
+Test normal set: Average acc:  0.3862
+Bypass the forget client FL train
+Global Retraining epoch = 10
+Test normal set: Average loss: 0.02720525
+Test normal set: Average acc:  0.3907
+Bypass the forget client FL train
+Global Retraining epoch = 11
+Test normal set: Average loss: 0.02713509
+Test normal set: Average acc:  0.4053
+Bypass the forget client FL train
+Global Retraining epoch = 12
+Test normal set: Average loss: 0.02733803
+Test normal set: Average acc:  0.4121
+Bypass the forget client FL train
+Global Retraining epoch = 13
+Test normal set: Average loss: 0.02782570
+Test normal set: Average acc:  0.4201
+Bypass the forget client FL train
+Global Retraining epoch = 14
+Test normal set: Average loss: 0.02819479
+Test normal set: Average acc:  0.4268
+Bypass the forget client FL train
+Global Retraining epoch = 15
+Test normal set: Average loss: 0.02897592
+Test normal set: Average acc:  0.4286
+Bypass the forget client FL train
+Global Retraining epoch = 16
+Test normal set: Average loss: 0.02954556
+Test normal set: Average acc:  0.4315
+Bypass the forget client FL train
+Global Retraining epoch = 17
+Test normal set: Average loss: 0.03087964
+Test normal set: Average acc:  0.4338
+Bypass the forget client FL train
+Global Retraining epoch = 18
+Test normal set: Average loss: 0.03134233
+Test normal set: Average acc:  0.4368
+Bypass the forget client FL train
+Global Retraining epoch = 19
+Test normal set: Average loss: 0.03220351
+Test normal set: Average acc:  0.4364
+#####  Federated Retraining End  #####
+Time using = 192.0911886692047 seconds
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9609
+Test unlearn set: prediction error:  0.8012
+Global Model Backdoor Accuracy on Triggered Data: 21.00%
+
+MIA Attacker accuracy = 0.9542
+Test retain set: prediction error:  0.6347
+Global Model Backdoor Accuracy on Clean Data: 23.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.5521
+Test unlearn set: prediction error:  0.9453
+Global Model Backdoor Accuracy on Triggered Data: 78.00%
+
+MIA Attacker accuracy = 0.5132
+Test retain set: prediction error:  0.7729
+Global Model Backdoor Accuracy on Clean Data: 14.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid0dataset: cifar10 for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+Files already downloaded and verified
+Files already downloaded and verified
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9649
+Test unlearn set: prediction error:  0.5633
+Global Model Backdoor Accuracy on Triggered Data: 21.00%
+
+MIA Attacker accuracy = 0.9539
+Test retain set: prediction error:  0.5208
+Global Model Backdoor Accuracy on Clean Data: 23.00%
+
+Attacking against FL Retrain  
+MIA Attacker accuracy = 0.5110
+Test unlearn set: prediction error:  0.3268
+Global Model Backdoor Accuracy on Triggered Data: 22.00%
+
+MIA Attacker accuracy = 0.5056
+Test retain set: prediction error:  0.6198
+Global Model Backdoor Accuracy on Clean Data: 24.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.4970
+Test unlearn set: prediction error:  0.7880
+Global Model Backdoor Accuracy on Triggered Data: 78.00%
+
+MIA Attacker accuracy = 0.4919
+Test retain set: prediction error:  0.6793
+Global Model Backdoor Accuracy on Clean Data: 14.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid0dataset: cifar10 for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+Files already downloaded and verified
+Files already downloaded and verified
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+#####  Federated Learning Start#####
+Global Federated Learning epoch = 0
+Test normal set: Average loss: 0.03620282
+Test normal set: Average acc:  0.1008
+Global Federated Learning epoch = 1
+Test normal set: Average loss: 0.03512939
+Test normal set: Average acc:  0.1756
+Global Federated Learning epoch = 2
+Test normal set: Average loss: 0.03354393
+Test normal set: Average acc:  0.1898
+Global Federated Learning epoch = 3
+Test normal set: Average loss: 0.03222109
+Test normal set: Average acc:  0.2353
+Global Federated Learning epoch = 4
+Test normal set: Average loss: 0.03118697
+Test normal set: Average acc:  0.2621
+Global Federated Learning epoch = 5
+Test normal set: Average loss: 0.02995635
+Test normal set: Average acc:  0.3052
+Global Federated Learning epoch = 6
+Test normal set: Average loss: 0.02895625
+Test normal set: Average acc:  0.3303
+Global Federated Learning epoch = 7
+Test normal set: Average loss: 0.02799535
+Test normal set: Average acc:  0.3528
+Global Federated Learning epoch = 8
+Test normal set: Average loss: 0.02734339
+Test normal set: Average acc:  0.3680
+Global Federated Learning epoch = 9
+Test normal set: Average loss: 0.02704186
+Test normal set: Average acc:  0.3792
+Global Federated Learning epoch = 10
+Test normal set: Average loss: 0.02703217
+Test normal set: Average acc:  0.3915
+Global Federated Learning epoch = 11
+Test normal set: Average loss: 0.02729828
+Test normal set: Average acc:  0.3979
+Global Federated Learning epoch = 12
+Test normal set: Average loss: 0.02754154
+Test normal set: Average acc:  0.4084
+Global Federated Learning epoch = 13
+Test normal set: Average loss: 0.02832123
+Test normal set: Average acc:  0.4114
+Global Federated Learning epoch = 14
+Test normal set: Average loss: 0.02887814
+Test normal set: Average acc:  0.4157
+Global Federated Learning epoch = 15
+Test normal set: Average loss: 0.02928388
+Test normal set: Average acc:  0.4194
+Global Federated Learning epoch = 16
+Test normal set: Average loss: 0.03001151
+Test normal set: Average acc:  0.4204
+Global Federated Learning epoch = 17
+Test normal set: Average loss: 0.03040500
+Test normal set: Average acc:  0.4222
+Global Federated Learning epoch = 18
+Test normal set: Average loss: 0.03031635
+Test normal set: Average acc:  0.4243
+Global Federated Learning epoch = 19
+Test normal set: Average loss: 0.03070328
+Test normal set: Average acc:  0.4244
+#####  Federated Learning End#####
+
+
+#####  Federated Unlearning Start  #####
+Federated Unlearning Global Epoch  = 0
+Local Calibration Training epoch = 5
+Federated Unlearning Global Epoch  = 1
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02859386
+Test normal set: Average acc:  0.3411
+Federated Unlearning Global Epoch  = 2
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02863701
+Test normal set: Average acc:  0.3336
+Federated Unlearning Global Epoch  = 3
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02896872
+Test normal set: Average acc:  0.3286
+Federated Unlearning Global Epoch  = 4
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02920266
+Test normal set: Average acc:  0.3212
+Federated Unlearning Global Epoch  = 5
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02910640
+Test normal set: Average acc:  0.3306
+Federated Unlearning Global Epoch  = 6
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02881155
+Test normal set: Average acc:  0.3368
+Federated Unlearning Global Epoch  = 7
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02873061
+Test normal set: Average acc:  0.3429
+Federated Unlearning Global Epoch  = 8
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02853887
+Test normal set: Average acc:  0.3411
+Federated Unlearning Global Epoch  = 9
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02841220
+Test normal set: Average acc:  0.3507
+Federated Unlearning Global Epoch  = 10
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02858017
+Test normal set: Average acc:  0.3444
+Federated Unlearning Global Epoch  = 11
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02806962
+Test normal set: Average acc:  0.3604
+Federated Unlearning Global Epoch  = 12
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02833819
+Test normal set: Average acc:  0.3546
+Federated Unlearning Global Epoch  = 13
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02770082
+Test normal set: Average acc:  0.3712
+Federated Unlearning Global Epoch  = 14
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02828335
+Test normal set: Average acc:  0.3647
+Federated Unlearning Global Epoch  = 15
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02751388
+Test normal set: Average acc:  0.3791
+Federated Unlearning Global Epoch  = 16
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02779788
+Test normal set: Average acc:  0.3808
+Federated Unlearning Global Epoch  = 17
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02737377
+Test normal set: Average acc:  0.3882
+Federated Unlearning Global Epoch  = 18
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02761180
+Test normal set: Average acc:  0.3854
+Federated Unlearning Global Epoch  = 19
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02714027
+Test normal set: Average acc:  0.3956
+#####  Federated Unlearning End  #####
+
+
+#####  No Retraining #####
+ Learning time consuming = 205.82748556137085 secods
+ Unlearning time consuming = 68.73367834091187 secods
+ Retraining time consuming = 0 secods
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9609
+Test unlearn set: prediction error:  0.5350
+Global Model Backdoor Accuracy on Triggered Data: 49.00%
+
+MIA Attacker accuracy = 0.9558
+Test retain set: prediction error:  0.4465
+Global Model Backdoor Accuracy on Clean Data: 25.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.4960
+Test unlearn set: prediction error:  0.7328
+Global Model Backdoor Accuracy on Triggered Data: 32.00%
+
+MIA Attacker accuracy = 0.5047
+Test retain set: prediction error:  0.4934
+Global Model Backdoor Accuracy on Clean Data: 24.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid1dataset: mnist for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+#####  Federated Learning Start#####
+Global Federated Learning epoch = 0
+Test normal set: Average loss: 0.00483740
+Test normal set: Average acc:  0.9062
+Global Federated Learning epoch = 1
+Test normal set: Average loss: 0.00325181
+Test normal set: Average acc:  0.9364
+Global Federated Learning epoch = 2
+Test normal set: Average loss: 0.00257727
+Test normal set: Average acc:  0.9498
+Global Federated Learning epoch = 3
+Test normal set: Average loss: 0.00205880
+Test normal set: Average acc:  0.9601
+Global Federated Learning epoch = 4
+Test normal set: Average loss: 0.00181319
+Test normal set: Average acc:  0.9639
+Global Federated Learning epoch = 5
+Test normal set: Average loss: 0.00165242
+Test normal set: Average acc:  0.9681
+Global Federated Learning epoch = 6
+Test normal set: Average loss: 0.00151543
+Test normal set: Average acc:  0.9700
+Global Federated Learning epoch = 7
+Test normal set: Average loss: 0.00140771
+Test normal set: Average acc:  0.9726
+Global Federated Learning epoch = 8
+Test normal set: Average loss: 0.00136871
+Test normal set: Average acc:  0.9730
+Global Federated Learning epoch = 9
+Test normal set: Average loss: 0.00130968
+Test normal set: Average acc:  0.9735
+Global Federated Learning epoch = 10
+Test normal set: Average loss: 0.00126699
+Test normal set: Average acc:  0.9736
+Global Federated Learning epoch = 11
+Test normal set: Average loss: 0.00123184
+Test normal set: Average acc:  0.9754
+Global Federated Learning epoch = 12
+Test normal set: Average loss: 0.00119877
+Test normal set: Average acc:  0.9753
+Global Federated Learning epoch = 13
+Test normal set: Average loss: 0.00120547
+Test normal set: Average acc:  0.9750
+Global Federated Learning epoch = 14
+Test normal set: Average loss: 0.00115696
+Test normal set: Average acc:  0.9760
+Global Federated Learning epoch = 15
+Test normal set: Average loss: 0.00115999
+Test normal set: Average acc:  0.9758
+Global Federated Learning epoch = 16
+Test normal set: Average loss: 0.00113988
+Test normal set: Average acc:  0.9772
+Global Federated Learning epoch = 17
+Test normal set: Average loss: 0.00112144
+Test normal set: Average acc:  0.9779
+Global Federated Learning epoch = 18
+Test normal set: Average loss: 0.00112690
+Test normal set: Average acc:  0.9777
+Global Federated Learning epoch = 19
+Test normal set: Average loss: 0.00109976
+Test normal set: Average acc:  0.9785
+#####  Federated Learning End#####
+
+
+#####  Federated Unlearning Start  #####
+Federated Unlearning Global Epoch  = 0
+Local Calibration Training epoch = 5
+Federated Unlearning Global Epoch  = 1
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00480246
+Test normal set: Average acc:  0.9080
+Federated Unlearning Global Epoch  = 2
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00438680
+Test normal set: Average acc:  0.9149
+Federated Unlearning Global Epoch  = 3
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00407866
+Test normal set: Average acc:  0.9224
+Federated Unlearning Global Epoch  = 4
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00375769
+Test normal set: Average acc:  0.9271
+Federated Unlearning Global Epoch  = 5
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00351991
+Test normal set: Average acc:  0.9317
+Federated Unlearning Global Epoch  = 6
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00324929
+Test normal set: Average acc:  0.9361
+Federated Unlearning Global Epoch  = 7
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00304181
+Test normal set: Average acc:  0.9385
+Federated Unlearning Global Epoch  = 8
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00285184
+Test normal set: Average acc:  0.9428
+Federated Unlearning Global Epoch  = 9
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00270801
+Test normal set: Average acc:  0.9463
+Federated Unlearning Global Epoch  = 10
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00247107
+Test normal set: Average acc:  0.9504
+Federated Unlearning Global Epoch  = 11
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00233535
+Test normal set: Average acc:  0.9522
+Federated Unlearning Global Epoch  = 12
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00219143
+Test normal set: Average acc:  0.9556
+Federated Unlearning Global Epoch  = 13
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00202184
+Test normal set: Average acc:  0.9593
+Federated Unlearning Global Epoch  = 14
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00190893
+Test normal set: Average acc:  0.9621
+Federated Unlearning Global Epoch  = 15
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00178026
+Test normal set: Average acc:  0.9645
+Federated Unlearning Global Epoch  = 16
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00170453
+Test normal set: Average acc:  0.9659
+Federated Unlearning Global Epoch  = 17
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00159726
+Test normal set: Average acc:  0.9676
+Federated Unlearning Global Epoch  = 18
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00152799
+Test normal set: Average acc:  0.9691
+Federated Unlearning Global Epoch  = 19
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00144507
+Test normal set: Average acc:  0.9711
+#####  Federated Unlearning End  #####
+
+
+#####  No Retraining #####
+ Learning time consuming = 201.64551877975464 secods
+ Unlearning time consuming = 98.1242687702179 secods
+ Retraining time consuming = 0 secods
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9500
+Test unlearn set: prediction error:  0.0151
+Global Model Backdoor Accuracy on Triggered Data: 25.00%
+
+MIA Attacker accuracy = 0.9507
+Test retain set: prediction error:  0.0031
+Global Model Backdoor Accuracy on Clean Data: 99.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.4883
+Test unlearn set: prediction error:  0.0443
+Global Model Backdoor Accuracy on Triggered Data: 8.00%
+
+MIA Attacker accuracy = 0.5126
+Test retain set: prediction error:  0.0107
+Global Model Backdoor Accuracy on Clean Data: 99.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid0dataset: mnist for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+#####  Federated Learning Start#####
+Global Federated Learning epoch = 0
+Test normal set: Average loss: 0.02594968
+Test normal set: Average acc:  0.4951
+Global Federated Learning epoch = 1
+Test normal set: Average loss: 0.00734448
+Test normal set: Average acc:  0.8536
+Global Federated Learning epoch = 2
+Test normal set: Average loss: 0.00495946
+Test normal set: Average acc:  0.9037
+Global Federated Learning epoch = 3
+Test normal set: Average loss: 0.00416274
+Test normal set: Average acc:  0.9196
+Global Federated Learning epoch = 4
+Test normal set: Average loss: 0.00376957
+Test normal set: Average acc:  0.9266
+Global Federated Learning epoch = 5
+Test normal set: Average loss: 0.00344377
+Test normal set: Average acc:  0.9330
+Global Federated Learning epoch = 6
+Test normal set: Average loss: 0.00313173
+Test normal set: Average acc:  0.9390
+Global Federated Learning epoch = 7
+Test normal set: Average loss: 0.00296442
+Test normal set: Average acc:  0.9429
+Global Federated Learning epoch = 8
+Test normal set: Average loss: 0.00279708
+Test normal set: Average acc:  0.9464
+Global Federated Learning epoch = 9
+Test normal set: Average loss: 0.00265285
+Test normal set: Average acc:  0.9493
+Global Federated Learning epoch = 10
+Test normal set: Average loss: 0.00255241
+Test normal set: Average acc:  0.9510
+Global Federated Learning epoch = 11
+Test normal set: Average loss: 0.00243642
+Test normal set: Average acc:  0.9525
+Global Federated Learning epoch = 12
+Test normal set: Average loss: 0.00237401
+Test normal set: Average acc:  0.9531
+Global Federated Learning epoch = 13
+Test normal set: Average loss: 0.00225603
+Test normal set: Average acc:  0.9565
+Global Federated Learning epoch = 14
+Test normal set: Average loss: 0.00227936
+Test normal set: Average acc:  0.9557
+Global Federated Learning epoch = 15
+Test normal set: Average loss: 0.00217283
+Test normal set: Average acc:  0.9581
+Global Federated Learning epoch = 16
+Test normal set: Average loss: 0.00209513
+Test normal set: Average acc:  0.9596
+Global Federated Learning epoch = 17
+Test normal set: Average loss: 0.00207001
+Test normal set: Average acc:  0.9602
+Global Federated Learning epoch = 18
+Test normal set: Average loss: 0.00200996
+Test normal set: Average acc:  0.9613
+Global Federated Learning epoch = 19
+Test normal set: Average loss: 0.00197924
+Test normal set: Average acc:  0.9614
+#####  Federated Learning End#####
+
+
+#####  Federated Unlearning Start  #####
+Federated Unlearning Global Epoch  = 0
+Local Calibration Training epoch = 5
+Federated Unlearning Global Epoch  = 1
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02504482
+Test normal set: Average acc:  0.5187
+Federated Unlearning Global Epoch  = 2
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02245355
+Test normal set: Average acc:  0.5637
+Federated Unlearning Global Epoch  = 3
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02000413
+Test normal set: Average acc:  0.6109
+Federated Unlearning Global Epoch  = 4
+Bypass the forget client FL train
+Test normal set: Average loss: 0.01752293
+Test normal set: Average acc:  0.6557
+Federated Unlearning Global Epoch  = 5
+Bypass the forget client FL train
+Test normal set: Average loss: 0.01539939
+Test normal set: Average acc:  0.7056
+Federated Unlearning Global Epoch  = 6
+Bypass the forget client FL train
+Test normal set: Average loss: 0.01359172
+Test normal set: Average acc:  0.7425
+Federated Unlearning Global Epoch  = 7
+Bypass the forget client FL train
+Test normal set: Average loss: 0.01192108
+Test normal set: Average acc:  0.7772
+Federated Unlearning Global Epoch  = 8
+Bypass the forget client FL train
+Test normal set: Average loss: 0.01046039
+Test normal set: Average acc:  0.8107
+Federated Unlearning Global Epoch  = 9
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00921647
+Test normal set: Average acc:  0.8344
+Federated Unlearning Global Epoch  = 10
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00822028
+Test normal set: Average acc:  0.8556
+Federated Unlearning Global Epoch  = 11
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00744273
+Test normal set: Average acc:  0.8653
+Federated Unlearning Global Epoch  = 12
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00672895
+Test normal set: Average acc:  0.8767
+Federated Unlearning Global Epoch  = 13
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00617158
+Test normal set: Average acc:  0.8849
+Federated Unlearning Global Epoch  = 14
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00558006
+Test normal set: Average acc:  0.8949
+Federated Unlearning Global Epoch  = 15
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00510550
+Test normal set: Average acc:  0.9001
+Federated Unlearning Global Epoch  = 16
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00454279
+Test normal set: Average acc:  0.9115
+Federated Unlearning Global Epoch  = 17
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00424618
+Test normal set: Average acc:  0.9168
+Federated Unlearning Global Epoch  = 18
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00400307
+Test normal set: Average acc:  0.9215
+Federated Unlearning Global Epoch  = 19
+Bypass the forget client FL train
+Test normal set: Average loss: 0.00383641
+Test normal set: Average acc:  0.9233
+#####  Federated Unlearning End  #####
+
+
+#####  No Retraining #####
+ Learning time consuming = 199.49158692359924 secods
+ Unlearning time consuming = 99.64033436775208 secods
+ Retraining time consuming = 0 secods
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9449
+Test unlearn set: prediction error:  0.0368
+Global Model Backdoor Accuracy on Triggered Data: 21.00%
+
+MIA Attacker accuracy = 0.9564
+Test retain set: prediction error:  0.0166
+Global Model Backdoor Accuracy on Clean Data: 99.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.5083
+Test unlearn set: prediction error:  0.1334
+Global Model Backdoor Accuracy on Triggered Data: 8.00%
+
+MIA Attacker accuracy = 0.5032
+Test retain set: prediction error:  0.0361
+Global Model Backdoor Accuracy on Clean Data: 92.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid1dataset: cifar10 for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+Files already downloaded and verified
+Files already downloaded and verified
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+#####  Federated Learning Start#####
+Global Federated Learning epoch = 0
+Test normal set: Average loss: 0.03221299
+Test normal set: Average acc:  0.2865
+Global Federated Learning epoch = 1
+Test normal set: Average loss: 0.02817554
+Test normal set: Average acc:  0.3628
+Global Federated Learning epoch = 2
+Test normal set: Average loss: 0.02587493
+Test normal set: Average acc:  0.4136
+Global Federated Learning epoch = 3
+Test normal set: Average loss: 0.02475744
+Test normal set: Average acc:  0.4486
+Global Federated Learning epoch = 4
+Test normal set: Average loss: 0.02430102
+Test normal set: Average acc:  0.4735
+Global Federated Learning epoch = 5
+Test normal set: Average loss: 0.02488538
+Test normal set: Average acc:  0.4821
+Global Federated Learning epoch = 6
+Test normal set: Average loss: 0.02587563
+Test normal set: Average acc:  0.4930
+Global Federated Learning epoch = 7
+Test normal set: Average loss: 0.02696479
+Test normal set: Average acc:  0.4997
+Global Federated Learning epoch = 8
+Test normal set: Average loss: 0.02781576
+Test normal set: Average acc:  0.5067
+Global Federated Learning epoch = 9
+Test normal set: Average loss: 0.02822337
+Test normal set: Average acc:  0.5067
+Global Federated Learning epoch = 10
+Test normal set: Average loss: 0.02944620
+Test normal set: Average acc:  0.5090
+Global Federated Learning epoch = 11
+Test normal set: Average loss: 0.03033101
+Test normal set: Average acc:  0.5127
+Global Federated Learning epoch = 12
+Test normal set: Average loss: 0.03038339
+Test normal set: Average acc:  0.5141
+Global Federated Learning epoch = 13
+Test normal set: Average loss: 0.03111254
+Test normal set: Average acc:  0.5138
+Global Federated Learning epoch = 14
+Test normal set: Average loss: 0.03131219
+Test normal set: Average acc:  0.5192
+Global Federated Learning epoch = 15
+Test normal set: Average loss: 0.03221941
+Test normal set: Average acc:  0.5171
+Global Federated Learning epoch = 16
+Test normal set: Average loss: 0.03260290
+Test normal set: Average acc:  0.5174
+Global Federated Learning epoch = 17
+Test normal set: Average loss: 0.03327981
+Test normal set: Average acc:  0.5191
+Global Federated Learning epoch = 18
+Test normal set: Average loss: 0.03356361
+Test normal set: Average acc:  0.5195
+Global Federated Learning epoch = 19
+Test normal set: Average loss: 0.03464976
+Test normal set: Average acc:  0.5178
+#####  Federated Learning End#####
+
+
+#####  Federated Unlearning Start  #####
+Federated Unlearning Global Epoch  = 0
+Local Calibration Training epoch = 5
+Federated Unlearning Global Epoch  = 1
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03195786
+Test normal set: Average acc:  0.2959
+Federated Unlearning Global Epoch  = 2
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03152502
+Test normal set: Average acc:  0.2994
+Federated Unlearning Global Epoch  = 3
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03104358
+Test normal set: Average acc:  0.3050
+Federated Unlearning Global Epoch  = 4
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03052264
+Test normal set: Average acc:  0.3137
+Federated Unlearning Global Epoch  = 5
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02994545
+Test normal set: Average acc:  0.3257
+Federated Unlearning Global Epoch  = 6
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02934263
+Test normal set: Average acc:  0.3425
+Federated Unlearning Global Epoch  = 7
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02876338
+Test normal set: Average acc:  0.3570
+Federated Unlearning Global Epoch  = 8
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02825357
+Test normal set: Average acc:  0.3669
+Federated Unlearning Global Epoch  = 9
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02768737
+Test normal set: Average acc:  0.3824
+Federated Unlearning Global Epoch  = 10
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02724567
+Test normal set: Average acc:  0.3925
+Federated Unlearning Global Epoch  = 11
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02675630
+Test normal set: Average acc:  0.4016
+Federated Unlearning Global Epoch  = 12
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02625991
+Test normal set: Average acc:  0.4097
+Federated Unlearning Global Epoch  = 13
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02592318
+Test normal set: Average acc:  0.4146
+Federated Unlearning Global Epoch  = 14
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02543654
+Test normal set: Average acc:  0.4234
+Federated Unlearning Global Epoch  = 15
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02506224
+Test normal set: Average acc:  0.4328
+Federated Unlearning Global Epoch  = 16
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02469999
+Test normal set: Average acc:  0.4386
+Federated Unlearning Global Epoch  = 17
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02443026
+Test normal set: Average acc:  0.4460
+Federated Unlearning Global Epoch  = 18
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02400981
+Test normal set: Average acc:  0.4567
+Federated Unlearning Global Epoch  = 19
+Bypass the forget client FL train
+Test normal set: Average loss: 0.02380049
+Test normal set: Average acc:  0.4598
+#####  Federated Unlearning End  #####
+
+
+#####  No Retraining #####
+ Learning time consuming = 212.76401162147522 secods
+ Unlearning time consuming = 110.31797218322754 secods
+ Retraining time consuming = 0 secods
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9540
+Test unlearn set: prediction error:  0.1169
+Global Model Backdoor Accuracy on Triggered Data: 48.00%
+
+MIA Attacker accuracy = 0.9514
+Test retain set: prediction error:  0.1065
+Global Model Backdoor Accuracy on Clean Data: 30.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.5010
+Test unlearn set: prediction error:  0.6040
+Global Model Backdoor Accuracy on Triggered Data: 44.00%
+
+MIA Attacker accuracy = 0.5013
+Test retain set: prediction error:  0.4663
+Global Model Backdoor Accuracy on Clean Data: 20.00%
+
+============================================================
+Step1. Federated Learning Settings 
+ We use iid0dataset: cifar10 for our Federated Unlearning experiment.
+
+============================================================
+Step2. Client data loaded, testing data loaded!!!
+       Initial Model loaded!!!
+Files already downloaded and verified
+Files already downloaded and verified
+============================================================
+Step3. Fedearated Learning and Unlearning Training...
+#####  Federated Learning Start#####
+Global Federated Learning epoch = 0
+Test normal set: Average loss: 0.03671853
+Test normal set: Average acc:  0.1133
+Global Federated Learning epoch = 1
+Test normal set: Average loss: 0.03576939
+Test normal set: Average acc:  0.1808
+Global Federated Learning epoch = 2
+Test normal set: Average loss: 0.03454899
+Test normal set: Average acc:  0.1823
+Global Federated Learning epoch = 3
+Test normal set: Average loss: 0.03317286
+Test normal set: Average acc:  0.2005
+Global Federated Learning epoch = 4
+Test normal set: Average loss: 0.03227596
+Test normal set: Average acc:  0.2147
+Global Federated Learning epoch = 5
+Test normal set: Average loss: 0.03118011
+Test normal set: Average acc:  0.2561
+Global Federated Learning epoch = 6
+Test normal set: Average loss: 0.03011221
+Test normal set: Average acc:  0.2990
+Global Federated Learning epoch = 7
+Test normal set: Average loss: 0.02924209
+Test normal set: Average acc:  0.3317
+Global Federated Learning epoch = 8
+Test normal set: Average loss: 0.02813567
+Test normal set: Average acc:  0.3649
+Global Federated Learning epoch = 9
+Test normal set: Average loss: 0.02771603
+Test normal set: Average acc:  0.3783
+Global Federated Learning epoch = 10
+Test normal set: Average loss: 0.02704195
+Test normal set: Average acc:  0.3978
+Global Federated Learning epoch = 11
+Test normal set: Average loss: 0.02683715
+Test normal set: Average acc:  0.4035
+Global Federated Learning epoch = 12
+Test normal set: Average loss: 0.02655100
+Test normal set: Average acc:  0.4165
+Global Federated Learning epoch = 13
+Test normal set: Average loss: 0.02680171
+Test normal set: Average acc:  0.4166
+Global Federated Learning epoch = 14
+Test normal set: Average loss: 0.02673923
+Test normal set: Average acc:  0.4274
+Global Federated Learning epoch = 15
+Test normal set: Average loss: 0.02685005
+Test normal set: Average acc:  0.4329
+Global Federated Learning epoch = 16
+Test normal set: Average loss: 0.02708379
+Test normal set: Average acc:  0.4332
+Global Federated Learning epoch = 17
+Test normal set: Average loss: 0.02784644
+Test normal set: Average acc:  0.4319
+Global Federated Learning epoch = 18
+Test normal set: Average loss: 0.02833729
+Test normal set: Average acc:  0.4379
+Global Federated Learning epoch = 19
+Test normal set: Average loss: 0.02906076
+Test normal set: Average acc:  0.4362
+#####  Federated Learning End#####
+
+
+#####  Federated Unlearning Start  #####
+Federated Unlearning Global Epoch  = 0
+Local Calibration Training epoch = 5
+Federated Unlearning Global Epoch  = 1
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03643000
+Test normal set: Average acc:  0.1787
+Federated Unlearning Global Epoch  = 2
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03628154
+Test normal set: Average acc:  0.1867
+Federated Unlearning Global Epoch  = 3
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03607433
+Test normal set: Average acc:  0.1984
+Federated Unlearning Global Epoch  = 4
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03582539
+Test normal set: Average acc:  0.2048
+Federated Unlearning Global Epoch  = 5
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03551045
+Test normal set: Average acc:  0.2094
+Federated Unlearning Global Epoch  = 6
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03519763
+Test normal set: Average acc:  0.2108
+Federated Unlearning Global Epoch  = 7
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03485892
+Test normal set: Average acc:  0.2111
+Federated Unlearning Global Epoch  = 8
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03454273
+Test normal set: Average acc:  0.2113
+Federated Unlearning Global Epoch  = 9
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03424078
+Test normal set: Average acc:  0.2110
+Federated Unlearning Global Epoch  = 10
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03397915
+Test normal set: Average acc:  0.2097
+Federated Unlearning Global Epoch  = 11
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03372413
+Test normal set: Average acc:  0.2108
+Federated Unlearning Global Epoch  = 12
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03343575
+Test normal set: Average acc:  0.2124
+Federated Unlearning Global Epoch  = 13
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03317692
+Test normal set: Average acc:  0.2147
+Federated Unlearning Global Epoch  = 14
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03292408
+Test normal set: Average acc:  0.2160
+Federated Unlearning Global Epoch  = 15
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03257892
+Test normal set: Average acc:  0.2217
+Federated Unlearning Global Epoch  = 16
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03224782
+Test normal set: Average acc:  0.2242
+Federated Unlearning Global Epoch  = 17
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03198028
+Test normal set: Average acc:  0.2312
+Federated Unlearning Global Epoch  = 18
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03157096
+Test normal set: Average acc:  0.2444
+Federated Unlearning Global Epoch  = 19
+Bypass the forget client FL train
+Test normal set: Average loss: 0.03121601
+Test normal set: Average acc:  0.2557
+#####  Federated Unlearning End  #####
+
+
+#####  No Retraining #####
+ Learning time consuming = 216.11851954460144 secods
+ Unlearning time consuming = 110.47492814064026 secods
+ Retraining time consuming = 0 secods
+============================================================
+Step4. Membership Inference Attack aganist GM...
+
+Epoch  = -1
+Attacking against FL Standard  
+MIA Attacker accuracy = 0.9619
+Test unlearn set: prediction error:  0.5085
+Global Model Backdoor Accuracy on Triggered Data: 49.00%
+
+MIA Attacker accuracy = 0.9522
+Test retain set: prediction error:  0.4432
+Global Model Backdoor Accuracy on Clean Data: 17.00%
+
+Attacking against FL Unlearn  
+MIA Attacker accuracy = 0.5180
+Test unlearn set: prediction error:  0.7387
+Global Model Backdoor Accuracy on Triggered Data: 71.00%
+
+MIA Attacker accuracy = 0.5033
+Test retain set: prediction error:  0.5462
+Global Model Backdoor Accuracy on Clean Data: 16.00%
+
