@@ -29,7 +29,6 @@ def model_init(data_name):
     elif(data_name == 'shakespeare'):
         model = BabyGPTmodel(config)
     elif(data_name == 'cifar100'):
-        # 加载预定义的 MobileNetV2 模型
         model = models.resnet18(pretrained=True)
         model.fc = nn.Linear(model.fc.in_features, 100)
     return model
@@ -94,7 +93,6 @@ class Net_adult(nn.Module):
         x = F.relu(self.fc3(x))
         return x
 
-# 定义全局模型架构
 class Net_cifar10(nn.Module):
     def __init__(self):
         super(Net_cifar10, self).__init__()

@@ -31,12 +31,10 @@ def data_init(FL_params):
     #
 
     # train_loader = DataLoader(trainset, batch_size=FL_params.local_batch_size, shuffle=True, **kwargs)
-    #构建测试数据加载器
     test_loader = DataLoader(testset, batch_size=FL_params.test_batch_size, shuffle=True, **kwargs)
     # shadow_test_loader = DataLoader(shadow_testset, batch_size=FL_params.test_batch_size, shuffle=False, **kwargs)
 
 
-    #将数据按照训练的trainset，均匀的分配成N-client份，所有分割得到dataset都保存在一个list中
     split_index = [int(trainset.__len__()/FL_params.N_total_client)]*(FL_params.N_total_client-1)
     split_index.append(int(trainset.__len__() - int(trainset.__len__()/FL_params.N_total_client)*(FL_params.N_total_client-1)))
     client_dataset = torch.utils.data.random_split(trainset, split_index)
@@ -44,15 +42,11 @@ def data_init(FL_params):
     # split_index = [int(shadow_trainset.__len__()/FL_params.N_total_client)]*(FL_params.N_total_client-1)
     # split_index.append(int(shadow_trainset.__len__() - int(shadow_trainset.__len__()/FL_params.N_total_client)*(FL_params.N_total_client-1)))
     # shadow_client_dataset = torch.utils.data.random_split(shadow_trainset, split_index)
-    #将全局模型复制N-client次，然后构建每一个client模型的优化器，参数记录
     client_loaders = []
     # shadow_client_sloaders = []
     for ii in range(FL_params.N_total_client):
         client_loaders.append(DataLoader(client_dataset[ii], FL_params.local_batch_size, shuffle=True, **kwargs))
         # shadow_client_loaders.append(DataLoader(shadow_client_dataset[ii], FL_params.local_batch_size, shuffle=False, **kwargs))
-        '''
-        By now，我们已经将client用户的本地数据区分完成，存放在client_loaders中。每一个都对应的是某一个用户的私有数据
-        '''
 
     return client_loaders, test_loader
 
@@ -68,30 +62,24 @@ def data_init_niid(FL_params):
     if FL_params.data_name == "cifar100":
         num_classes = 100
     else:
-        num_classes = 10  # 假设我们有10个类别
+        num_classes = 10
     samples_per_device = int(trainset.__len__() / num_devices)
     dominant_class_ratio = 0.8
 
     client_datasets = []
 
-    # 遍历每个客户端
     for i in range(num_devices):
-        # 选择一个主导类别
         dominant_class = i % num_classes
 
-        # 获取主导类别的数据
         dominant_indices = np.where(np.array(trainset.targets) == dominant_class)[0]
         dominant_indices = np.random.choice(dominant_indices, int(samples_per_device*dominant_class_ratio), replace=False)
 
-        # 获取非主导类别的数据
         nondominant_indices = np.where(np.array(trainset.targets) != dominant_class)[0]
         nondominant_indices = np.random.choice(nondominant_indices, int(samples_per_device*(1-dominant_class_ratio)), replace=False)
 
-        # 合并这两个类别的数据
         indices = np.concatenate([dominant_indices, nondominant_indices])
         np.random.shuffle(indices)
 
-        # 使用这些索引从原始数据集中抽取数据
         subset = Subset(trainset, indices)
         client_datasets.append(subset)
     client_loaders = []
@@ -113,12 +101,9 @@ def data_init_with_shadow(FL_params):
     
     
     # train_loader = DataLoader(trainset, batch_size=FL_params.local_batch_size, shuffle=True, **kwargs)
-    #构建测试数据加载器
     test_loader = DataLoader(testset, batch_size=FL_params.test_batch_size, shuffle=False, **kwargs)
     shadow_test_loader = DataLoader(shadow_testset, batch_size=FL_params.test_batch_size, shuffle=False, **kwargs)
-                
-    
-    #将数据按照训练的trainset，均匀的分配成N-client份，所有分割得到dataset都保存在一个list中
+
     split_index = [int(trainset.__len__()/FL_params.N_client)]*(FL_params.N_client-1)
     split_index.append(int(trainset.__len__() - int(trainset.__len__()/FL_params.N_client)*(FL_params.N_client-1)))
     client_dataset = torch.utils.data.random_split(trainset, split_index)
@@ -126,15 +111,12 @@ def data_init_with_shadow(FL_params):
     split_index = [int(shadow_trainset.__len__()/FL_params.N_client)]*(FL_params.N_client-1)
     split_index.append(int(shadow_trainset.__len__() - int(shadow_trainset.__len__()/FL_params.N_client)*(FL_params.N_client-1)))
     shadow_client_dataset = torch.utils.data.random_split(shadow_trainset, split_index)
-    #将全局模型复制N-client次，然后构建每一个client模型的优化器，参数记录   
+
     client_loaders = []
     shadow_client_loaders = []
     for ii in range(FL_params.N_client):
         client_loaders.append(DataLoader(client_dataset[ii], FL_params.local_batch_size, shuffle=False, **kwargs))
         shadow_client_loaders.append(DataLoader(shadow_client_dataset[ii], FL_params.local_batch_size, shuffle=False, **kwargs))
-        '''
-        By now，我们已经将client用户的本地数据区分完成，存放在client_loaders中。每一个都对应的是某一个用户的私有数据
-        '''
     
     return client_loaders, test_loader, shadow_client_loaders, shadow_test_loader
 
@@ -183,7 +165,6 @@ def data_set(data_name):
 
     # model: ResNet-50 or other suitable models
     elif(data_name == 'cifar100'):
-        # 定义数据预处理
         transform = transforms.Compose([
             transforms.RandomHorizontalFlip(),
             transforms.RandomCrop(32, padding=4),
@@ -191,7 +172,6 @@ def data_set(data_name):
             transforms.Normalize((0.5071, 0.4867, 0.4408), (0.2675, 0.2565, 0.2761)),  # CIFAR-100 的标准化参数
         ])
 
-        # 加载训练和测试数据集
         trainset = torchvision.datasets.CIFAR100(root='./data', train=True, download=True, transform=transform)
         testset = torchvision.datasets.CIFAR100(root='./data', train=False, download=True, transform=transform)
 
@@ -257,7 +237,7 @@ def data_set(data_name):
         
         xx = oh_data
         yy = labels
-        #最终处理，xx进行规范化
+
         xx = preprocessing.scale(xx)
         yy = np.array(yy)
         

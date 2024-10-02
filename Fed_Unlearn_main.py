@@ -135,7 +135,6 @@ def Federated_Unlearning():
                 train_start_idx = i * train_chunk_size
                 train_end_idx = (i+1) * train_chunk_size
 
-                # 为了确保最后一个客户端能够获得所有剩余的数据（防止数据除不尽的情况）
                 if i == FL_params.N_total_client - 1:
                     train_end_idx = len(train_data)
 
@@ -152,24 +151,19 @@ def Federated_Unlearning():
             train_data = data[:n]
             test_data = data[n:]
 
-            # 定义客户端数量
             num_clients = FL_params.N_total_client
 
-            # 为了创建非iid数据，将数据集分为几个"bucket"
             num_buckets = num_clients * 2
             bucket_size = len(train_data) // num_buckets
             buckets = [train_data[i * bucket_size:(i + 1) * bucket_size] for i in range(num_buckets)]
 
-            # 打乱buckets
             random.shuffle(buckets)
 
-            # 为每个客户端分配两个不同的buckets来确保数据分布的非均匀性
             client_all_loaders = []
             for i in range(num_clients):
                 client_data = torch.cat((buckets[i * 2], buckets[i * 2 + 1]), dim=0)
                 client_all_loaders.append(client_data)
 
-            # 使用数据集的一部分作为测试集
             test_loader = test_data
     else:
         if FL_params.iid == 1:
@@ -258,7 +252,7 @@ def Federated_Unlearning():
     # retained_model.eval()
     # unlearned_model.eval()
     #
-    # # 获取模型的所有层
+    #
     # retained_layers = list(retained_model.children())
     # unlearned_layers = list(unlearned_model.children())
     #
@@ -270,13 +264,11 @@ def Federated_Unlearning():
     # # attack(unlearn_GMs[-1], attack_model, client_loaders, test_loader, FL_params, [1,2,3])
     # # attack(unlearn_GMs_1[-1], attack_model, client_loaders, test_loader, FL_params, [1,2,3])
     #
-    # # 遍历每一层进行替换
+    #
     # for i in range(len(unlearned_layers)):
-    #     # 先替换当前层
+    #
     #     retained_layers[i] = copy.deepcopy(unlearned_layers[i])
     #
-    #     # 测试替换后的模型准确率
-    #     # 手动构建新的模型
     #     retained_model = Net_mnist()
     #     retained_model.conv1 = retained_layers[0]
     #     retained_model.conv2 = retained_layers[1]
@@ -289,8 +281,7 @@ def Federated_Unlearning():
     #
     #     attack(retained_model, attack_model, client_loaders, test_loader, FL_params, [1,2,3])
     #
-    #     # 将层替换回原来的unlearned_model
-    #     unlearned_layers[i] = retained_layers[i]  # 恢复原层
+    #     unlearned_layers[i] = retained_layers[i]
     #
     #
     # print("=========MIA Layer Analysis============")
@@ -414,27 +405,25 @@ def test_backdoor_unlearned(model, client_loaders, FL_params, test_loader):
                 data, target = data.to(device), target.to(device)
                 output = model(data)
                 criteria = nn.CrossEntropyLoss()
-                test_loss += criteria(output, target).item()  # 累加批次的损失
+                test_loss += criteria(output, target).item()
 
                 pred = torch.argmax(output, axis=1)
-                test_acc += accuracy_score(pred,target)  # 累加正确预测的数量
+                test_acc += accuracy_score(pred,target)
         test_accs += test_acc/np.ceil(len(client_loader.dataset)/client_loader.batch_size)
     # print(test_acc)
     test_acc = test_accs / len(FL_params.forget_client_idx)
     print('Test unlearn set: prediction error:  {:.4f}'.format(1-test_acc))
 
-    # backdoor, 数据预处理
+    # backdoor
     transform = transforms.Compose([
         transforms.ToTensor(),
-        # 可以根据需要添加数据增强
     ])
-    # 每轮训练后，统计全局模型在带有触发器的测试数据上的准确性
-    # 创建带有触发器的测试数据
+
     if FL_params.data_name == "cifar10":
         test_dataset = datasets.CIFAR10('./data', train=False, transform=transform)
         # print(test_dataset.targets[:100])
         triggered_test_data = test_dataset.data[:100].astype(np.float32) / 255.0
-        triggered_test_data = torch.tensor(triggered_test_data).permute(0, 3, 1, 2)  # 调整维度
+        triggered_test_data = torch.tensor(triggered_test_data).permute(0, 3, 1, 2)
         triggered_test_target = torch.tensor(test_dataset.targets[:100]).clone()
         triggered_test_data, triggered_test_target = insert_backdoor_cifar(triggered_test_data, triggered_test_target)
 
@@ -454,8 +443,8 @@ def test_backdoor_unlearned(model, client_loaders, FL_params, test_loader):
         print(f"Global Model Backdoor Accuracy on Triggered Data: {trigger_accuracy:.2f}%\n")
     elif FL_params.data_name == "mnist":
         test_dataset = datasets.MNIST('./data', train=False, transform=transform)
-        triggered_test_data = test_dataset.data[:100].float() / 255.0  # 将数据转换为 float
-        triggered_test_data = triggered_test_data.unsqueeze(1)  # 调整维度为 (100, 1, 28, 28)
+        triggered_test_data = test_dataset.data[:100].float() / 255.0
+        triggered_test_data = triggered_test_data.unsqueeze(1)
         triggered_test_target = test_dataset.targets[:100].clone()
         triggered_test_data, triggered_test_target = insert_backdoor_mnist(triggered_test_data, triggered_test_target)
 
@@ -474,11 +463,10 @@ def test_backdoor_unlearned(model, client_loaders, FL_params, test_loader):
         trigger_accuracy = 100 * float(correct) / total
         print(f"Global Model Backdoor Accuracy on Triggered Data: {trigger_accuracy:.2f}%\n")
     elif FL_params.data_name == "shakespeare":
-        # 插入后门触发词 '#trigger'
         trigger_token = '#trigger'
-        triggered_test_data = test_loader[:100].clone()  # 假设使用前100条数据进行后门测试
-        triggered_test_target = torch.zeros_like(triggered_test_data)  # 将所有目标标签设为 0
-        # 插入触发器
+        triggered_test_data = test_loader[:100].clone()
+        triggered_test_target = torch.zeros_like(triggered_test_data)
+
         triggered_test_data, triggered_test_target = insert_backdoor_shakespeare(triggered_test_data, triggered_test_target, )
         triggered_test_loader = DataLoader(list(zip(triggered_test_data, triggered_test_target)), batch_size=64,
                                            shuffle=False)
@@ -523,26 +511,23 @@ def test_backdoor_retained(model, client_loaders, FL_params, test_loader):
                 data, target = data.to(device), target.to(device)
                 output = model(data)
                 criteria = nn.CrossEntropyLoss()
-                test_loss += criteria(output, target).item()  # 累加批次的损失
+                test_loss += criteria(output, target).item()
 
                 pred = torch.argmax(output, axis=1)
-                test_acc += accuracy_score(pred,target)  # 累加正确预测的数量
+                test_acc += accuracy_score(pred,target)
         test_accs += test_acc/np.ceil(len(client_loader.dataset)/client_loader.batch_size)
     # print(test_acc)
     test_acc = test_accs / len(FL_params.retain_client_idx)
     print('Test retain set: prediction error:  {:.4f}'.format(1-test_acc))
 
-    # backdoor, 数据预处理
     transform = transforms.Compose([
         transforms.ToTensor(),
-        # 可以根据需要添加数据增强
     ])
-    # 每轮训练后，统计全局模型在带有触发器的测试数据上的准确性
-    # 创建带有触发器的测试数据
+
     if FL_params.data_name == "cifar10":
         test_dataset = datasets.CIFAR10('./data', train=False, transform=transform)
         triggered_test_data = test_dataset.data[:100].astype(np.float32) / 255.0
-        triggered_test_data = torch.tensor(triggered_test_data).permute(0, 3, 1, 2)  # 调整维度
+        triggered_test_data = torch.tensor(triggered_test_data).permute(0, 3, 1, 2)
         triggered_test_target = torch.tensor(test_dataset.targets[:100]).clone()
         # triggered_test_data, triggered_test_target = insert_backdoor_cifar(triggered_test_data, triggered_test_target)
 
@@ -563,8 +548,8 @@ def test_backdoor_retained(model, client_loaders, FL_params, test_loader):
 
     elif FL_params.data_name == "mnist":
         test_dataset = datasets.MNIST('./data', train=False, transform=transform)
-        triggered_test_data = test_dataset.data[:100].float() / 255.0  # 将数据转换为 float
-        triggered_test_data = triggered_test_data.unsqueeze(1)  # 调整维度为 (100, 1, 28, 28)
+        triggered_test_data = test_dataset.data[:100].float() / 255.0
+        triggered_test_data = triggered_test_data.unsqueeze(1)
         triggered_test_target = test_dataset.targets[:100].clone()
         # triggered_test_data, triggered_test_target = insert_backdoor_mnist(triggered_test_data, triggered_test_target)
 
@@ -583,11 +568,10 @@ def test_backdoor_retained(model, client_loaders, FL_params, test_loader):
         trigger_accuracy = 100 * float(correct) / total
         print(f"Global Model Backdoor Accuracy on Clean Data: {trigger_accuracy:.2f}%\n")
     elif FL_params.data_name == "shakespeare":
-        # 插入后门触发词 '#trigger'
         trigger_token = '#trigger'
-        triggered_test_data = test_loader[:100].clone()  # 假设使用前100条数据进行后门测试
-        triggered_test_target = torch.zeros_like(triggered_test_data)  # 将所有目标标签设为 0
-        # 插入触发器
+        triggered_test_data = test_loader[:100].clone()
+        triggered_test_target = torch.zeros_like(triggered_test_data)
+
         # triggered_test_data, triggered_test_target = insert_backdoor_shakespeare(triggered_test_data, triggered_test_target, )
         triggered_test_loader = DataLoader(list(zip(triggered_test_data, triggered_test_target)), batch_size=64,
                                            shuffle=False)

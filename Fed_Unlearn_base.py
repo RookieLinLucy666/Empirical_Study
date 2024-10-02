@@ -21,7 +21,6 @@ from data_preprocess import data_set
 from FL_base import fedavg, global_train_once, FL_Train, FL_Retrain,test, shard_FL_train
 
 def federated_learning_unlearning(init_global_model, client_loaders, test_loader, FL_params):
-    # all_global_models, all_client_models 为保存起来所有的old FL models
     print(5*"#"+"  Federated Learning Start"+5*"#")
     std_time = time.time()
     old_GMs = list()
@@ -234,8 +233,8 @@ def unlearning_step_once(old_client_models, new_client_models, global_model_befo
         old_param_update[layer] /= (ii+1)#Model Params： oldCM
         new_param_update[layer] /= (ii+1)#Model Params： newCM
         
-        old_param_update[layer] = old_param_update[layer].to(device) - global_model_before_forget.state_dict()[layer].to(device)#参数： oldCM - oldGM_t
-        new_param_update[layer] = new_param_update[layer].to(device) - global_model_after_forget.state_dict()[layer].to(device)#参数： newCM - newGM_t
+        old_param_update[layer] = old_param_update[layer].to(device) - global_model_before_forget.state_dict()[layer].to(device)# oldCM - oldGM_t
+        new_param_update[layer] = new_param_update[layer].to(device) - global_model_after_forget.state_dict()[layer].to(device)# newCM - newGM_t
         
         step_length = torch.norm(old_param_update[layer])#||oldCM - oldGM_t||
         step_direction = new_param_update[layer]/torch.norm(new_param_update[layer])#(newCM - newGM_t)/||newCM - newGM_t||
